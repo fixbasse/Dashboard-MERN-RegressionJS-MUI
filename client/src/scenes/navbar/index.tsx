@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <Box
             color={palette.grey[300]}
-            className="flex items-center justify-between"
+            className="flex items-center justify-between mb-4"
         >
             {/* LEFT SIDE */}
             <section className="flex items-center gap-2">
@@ -25,7 +25,7 @@ const Navbar = () => {
             </section>
 
             {/* RIGHT SIDE */}
-            <section className="flex items-center gap-2">
+            <section className="flex items-center gap-4">
                 <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
                     <Link
                         to="/"

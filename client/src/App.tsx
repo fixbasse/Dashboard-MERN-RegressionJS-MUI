@@ -1,6 +1,5 @@
 import { useMemo } from "react"
-import { Route, Routes } from "react-router-dom";
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
   Box,
   CssBaseline,
@@ -17,23 +16,25 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
 
-        <Box
-          width="100%"
-          height="100%"
-          padding="1rem 2rem 4rem 2rem"
-        >
-          <Navbar />
+          <Box
+            width="100%"
+            height="100%"
+            padding="1rem 2rem 4rem 2rem"
+          >
+            <Navbar />
 
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/predictions" element={<div>Predictions Page</div>} />
-          </Routes>
-        </Box>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/predictions" element={<div>Predictions Page</div>} />
+            </Routes>
+          </Box>
 
-      </ThemeProvider>
+        </ThemeProvider>
+      </BrowserRouter>
     </>
   )
 }
